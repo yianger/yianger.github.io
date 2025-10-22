@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片展示系统</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>我的图片展示</h1>
+            <p class="subtitle">精心挑选的视觉作品集</p>
+            <div class="mode-indicator" id="mode-indicator">
+                <span>🔒</span> 只读模式 - 点击切换管理员登录
+            </div>
+        </header>
+
+        <div class="admin-panel" id="admin-panel">
+            <h2>管理员登录</h2>
+            <div class="password-form">
+                <input type="password" class="password-input" id="password-input" placeholder="请输入管理员密码">
+                <button class="password-submit" id="password-submit">确认登录</button>
+                <div class="error-message" id="error-message">密码错误，请重试</div>
+            </div>
+        </div>
+
+        <div class="edit-mode-indicator" id="edit-mode-indicator">
+            🔓 编辑模式已激活 - 您现在可以上传和编辑内容
+        </div>
+
+        <button class="save-exit-btn" id="save-exit-btn">保存并退出编辑模式</button>
+
+        <section class="upload-section" id="upload-section">
+            <h2>上传图片</h2>
+            <div class="upload-area" id="drop-area">
+                <i>📁</i>
+                <p>拖放图片到这里，或点击上传</p>
+                <p class="small">支持 JPG, PNG, GIF 格式，单张图片不超过 5MB</p>
+                <button class="upload-btn">选择图片</button>
+                <input type="file" id="file-input" accept="image/*" multiple>
+            </div>
+        </section>
+
+        <section class="gallery" id="image-gallery">
+            <!-- 图片将通过JavaScript动态添加 -->
+            <div class="empty-state" id="empty-state">
+                <i>🖼️</i>
+                <h3>暂无图片</h3>
+                <p>管理员可以上传图片并添加描述</p>
+            </div>
+        </section>
+
+        <div class="footer">
+            <p>© 2023 我的图片展示 | 此页面内容受保护，普通用户无法编辑</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
